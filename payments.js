@@ -13,7 +13,6 @@ paymentForm.addEventListener('submit', submitPaymentInfo);
 // Add a curPayment object to allPayments, update html and reset input values
 function submitPaymentInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
-
   let curPayment = createCurPayment();
 
   if (curPayment) {
@@ -73,6 +72,6 @@ function updateSummary() {
 
   summaryTds[0].innerHTML = '$' + sumPaymentTotal('billAmt');
   summaryTds[1].innerHTML = '$' + sumPaymentTotal('tipAmt');
-  summaryTds[2].innerHTML =  Math.round(tipPercentAvg) + '%';
+  summaryTds[2].innerHTML = Math.round(tipPercentAvg) + '%';
 }
 

@@ -43,7 +43,7 @@ describe("updateServerTable Function Tests", function () {
     submitPaymentInfo();
 
     expect(Object.keys(allServers).length).toEqual(3);
-    expect(sumPaymentTotal('tipAmt') / Object.keys(allServers).length).toEqual(150);
+    expect(sumPaymentTotal('tipAmt')).toEqual(450);
   });
 
   afterEach(function () {
